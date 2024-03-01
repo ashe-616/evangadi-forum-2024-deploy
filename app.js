@@ -1,6 +1,6 @@
-require("dotenv").config()
+require("dotenv").config();
 const express = require("express");
-const cors = require('cors');
+const cors = require("cors");
 const app = express();
 // Enable CORS for all routes
 app.use(cors());
@@ -14,7 +14,7 @@ app.use(express.json());
 app.use("/api/users", userRoutes);
 app.use("/api/questions", questionRoutes);
 // answers routes middleware ??
-app.use("/api/answers",answerRoutes)
+app.use("/api/answers", answerRoutes);
 async function start() {
   try {
     const result = await dbConnection.execute("select 'test' ");
